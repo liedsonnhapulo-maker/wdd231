@@ -4,13 +4,13 @@ deep blue #3D405B
 */
 
 /* site Wide*/
-*  {
+* {
     font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
 }
 
 /* Header----------------*/
-header{
+header {
     display: grid;
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
@@ -19,12 +19,13 @@ header{
     column-gap: 8px;
 }
 
-header img{
+header img {
     display: block;
     width: 100%;
     height: auto;
     padding-bottom: 5px;
 }
+
 header span {
     font-size: 1.2rem;
     color: #3D405B;
@@ -39,27 +40,23 @@ header span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.humburger::before{
-    content: "\2630";
-    font-size: 2rem;
-}
 
-.humburger.show::before {
-    content: "\00D7";
-    font-size: 2rem;
-}
+
 /* navigation-----------------------*/
-.navegation{
+.navegation {
     display: none;
 }
-.navegation.show{
+
+.navegation.show {
     display: block;
 }
+
 .navegation ul {
     list-style-type: none;
     margin: 0;
     padding-bottom: 5px;
 }
+
 .navegation a {
     display: block;
     padding: 8rem 10 px;
@@ -68,44 +65,56 @@ header span {
     border-bottom: solid 1px #ddd;
 }
 
-.navegation li.current{
+.navegation li.current {
     background-color: #eee;
 }
-.navegation a:hover{
+
+.navegation a:hover {
     background-color: #E07A5F;
 }
 
-h1{
+h1 {
     margin-left: 10px;
 }
 
 
 /*footer------------------------------*/
 
-footer{
+footer {
     background-color: #eee;
     padding: 1rem 10px;
     text-align: center;
 }
-.social{
+
+.social {
     display: flex;
     justify-content: center;
     column-gap: 8px;
 }
-.social a{
+
+.social a {
     display: block;
     justify-content: center;
     align-items: center;
-    width: 44px;
+    w.humburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.humburger.show::before {
+    content: "\00D7";
+    font-size: 2rem;
+}idth: 44px;
     height: 44px;
     border: #ccc solid 1px;
     border-radius: 10px;
 }
 
-.social img{
+.social img {
     width: 40px;
     height: 40px;
 }
-.social a:hover{
+
+.social a:hover {
     background-color: #E07A5F;
 }

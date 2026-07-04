@@ -1,26 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <meta name="description" content="">
+    <meta name="description" content="Personal BYU student portfolio">
     <meta name="author" content="Liedson Nhapulo">
     <link rel="stylesheet" href="styles/normalize.css">
-    <script src="scripts/" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-
+        <img src="images/home.svg" alt="Site Logo" width="1" height="1">
+        <span>WDD231 Course</span>
+        <button id="ham-btn" class="hamburger"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-
+        <h1>Home</h1>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>My name is Liedson Nhapulo. I am 19 years old, Mozambican, and I live in Maputo, Mozambique. I graduated
+                in
+                Industrial
+                Electricity from the Matola Industrial and Commercial Institute. I am currently studying through
+                BYU–Pathway
+                Worldwide,
+                where I am developing my academic, professional, and personal skills. I am passionate about technology,
+                continuous
+                learning, and personal growth. I believe education is a powerful tool for creating opportunities and
+                making a
+                positive
+                difference. My goal is to build a career in technology while using my knowledge and skills to serve
+                others,
+                contribute
+                to my community, and continue growing both personally and professionally.</p>
+        </section>
+        <section class="photo">
+            <h2>Student's Photo</h2>
+            <img src="images/liedson.jpg" alt="Liedson" width="100" height="100">
+        </section>
+        <div class="courses">
+            <h2>My Courses</h2>
+        
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+        
+            <ul id="course-list"></ul>
+        </div>
     </main>
     <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/liedson-nhapulo-00a68a31b/"><img src="images/linkedin.svg"
+                    alt="linkedin" width="16" height="16"></a>
+            <a href="https://github.com/liedsonnhapulo-maker/wdd231"><img src="images/github.svg" alt="Github"
+                    width="16" height="16"></a>
+            <a href="https://www.instagram.com/liedsonking63/"><img src="images/instagram.svg" alt="instagram"
+                    width="16" height="16"></a>
+        </div>
         <p>© <span id="currentyear"></span> Liedson Nhapulo 👑 Mozambique</p>
         <p><span id="lastModified"></span></p>
     </footer>
-    
+
 </body>
+
 </html>
