@@ -51,7 +51,6 @@
         color: white;
     }
 
-   
     .about,
     .photo {
         background: white;
@@ -61,7 +60,6 @@
         height: 100%;
     }
 
-   
     .photo {
         display: flex;
         flex-direction: column;
