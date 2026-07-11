@@ -1,67 +1,81 @@
 {
-    "companies": [
+    "members": [
         {
-            "name": "Mozal Aluminium",
-            "address": "Beluluane Industrial Park, Matola",
-            "phone": "+258 21 000000",
-            "website": "https://www.mozal.com",
-            "image": "mozal.jpg",
-            "membership": 3,
-            "description": "Empresa de produção de alumínio."
-        },
-        {
-            "name": "Vodacom Mozambique",
-            "address": "Rua dos Desportistas, Maputo",
-            "phone": "+258 84 0000000",
-            "website": "https://www.vm.co.mz",
-            "image": "vodacom.jpg",
-            "membership": 3,
-            "description": "Empresa de telecomunicações móveis."
-        },
-        {
-            "name": "Movitel Mozambique",
-            "address": "Rua dos Desportistas, Maputo",
-            "phone": "+258 86 0000000",
-            "website": "https://www.movitel.co.mz",
-            "image": "movitel.jpg",
-            "membership": 2,
-            "description": "Serviços de comunicação e internet."
-        },
-        {
-            "name": "Tmcel Mozambique",
-            "address": "Rua Belmiro Obadias Muianga, Maputo",
-            "phone": "+258 82 1001000",
-            "website": "https://www.tmcel.mz",
-            "image": "tmcel.jpg",
-            "membership": 2,
-            "description": "Operadora nacional de telecomunicações."
-        },
-        {
-            "name": "Electricidade de Moçambique (EDM)",
-            "address": "Av. Eduardo Mondlane, Maputo",
-            "phone": "+258 21 350000",
-            "website": "https://www.edm.co.mz",
-            "image": "edm.jpg",
-            "membership": 3,
-            "description": "Empresa responsável pela distribuição de energia elétrica."
-        },
-        {
-            "name": "Millennium BIM",
-            "address": "Av. 25 de Setembro, Maputo",
-            "phone": "+258 21 350000",
-            "website": "https://www.millenniumbim.co.mz",
-            "image": "bim.jpg",
-            "membership": 2,
-            "description": "Banco comercial em Moçambique."
-        },
-        {
-            "name": "Shoprite Mozambique",
-            "address": "Matola, Maputo",
-            "phone": "+258 21 000000",
-            "website": "https://www.shoprite.co.za",
-            "image": "shoprite.jpg",
+            "name": "Baía Coffee Roasters",
+            "address": "Av. da Namaacha 812, Matola",
+            "phone": "+258 21 484 210",
+            "url": "https://www.baiacoffee.example.com",
+            "image": "baia-coffee-roasters.svg",
             "membership": 1,
-            "description": "Rede de supermercados."
+            "category": "Food & Beverage",
+            "founded": 2016,
+            "tagline": "Small-batch roasting sourced from Manica highland growers."
+        },
+        {
+            "name": "Oceana Imports & Logistics",
+            "address": "Zona Industrial de Matola, Armazém 12",
+            "phone": "+258 21 355 902",
+            "url": "https://www.oceanalogistics.example.com",
+            "image": "oceana-imports-logistics.svg",
+            "membership": 3,
+            "category": "Shipping & Logistics",
+            "founded": 1998,
+            "tagline": "Freight forwarding and customs clearance through the Matola corridor."
+        },
+        {
+            "name": "Capulana Textiles Co.",
+            "address": "Rua 1º de Maio 231, Matola",
+            "phone": "+258 21 322 471",
+            "url": "https://www.capulanatextiles.example.com",
+            "image": "capulana-textiles-co.svg",
+            "membership": 2,
+            "category": "Manufacturing",
+            "founded": 2009,
+            "tagline": "Woven and printed textiles supplying tailors across the region."
+        },
+        {
+            "name": "Matola Tech Hub",
+            "address": "Av. de Moçambique 174, 3º andar, Matola",
+            "phone": "+258 84 112 3390",
+            "url": "https://www.matolatechhub.example.com",
+            "image": "matola-tech-hub.svg",
+            "membership": 3,
+            "category": "Coworking & Technology",
+            "founded": 2019,
+            "tagline": "Coworking space and startup incubator for the digital economy."
+        },
+        {
+            "name": "Costa do Sol Seafood Market",
+            "address": "Av. da Machava 4520, Matola",
+            "phone": "+258 21 490 663",
+            "url": "https://www.costadosolseafood.example.com",
+            "image": "costa-do-sol-seafood-market.svg",
+            "membership": 1,
+            "category": "Wholesale & Retail",
+            "founded": 2004,
+            "tagline": "Daily catch distribution to restaurants and markets citywide."
+        },
+        {
+            "name": "Índico Solar Solutions",
+            "address": "Rua da Matola-Rio 98, Matola",
+            "phone": "+258 82 776 5541",
+            "url": "https://www.indicosolar.example.com",
+            "image": "indico-solar-solutions.svg",
+            "membership": 2,
+            "category": "Energy",
+            "founded": 2017,
+            "tagline": "Residential and commercial solar installation and maintenance."
+        },
+        {
+            "name": "Terra Firme Construction",
+            "address": "Av. de Angola 305, Matola",
+            "phone": "+258 21 401 287",
+            "url": "https://www.terrafirmeconstrucao.example.com",
+            "image": "terra-firme-construction.svg",
+            "membership": 1,
+            "category": "Construction",
+            "founded": 2011,
+            "tagline": "Commercial and residential construction across Matola Municipality."
         }
     ]
 }

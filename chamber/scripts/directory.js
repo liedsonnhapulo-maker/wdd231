@@ -1,48 +1,45 @@
-// directory.js
-
 const membersContainer = document.querySelector("#members");
+
 const gridButton = document.querySelector("#gridButton");
 const listButton = document.querySelector("#listButton");
 
-const membersURL = "data/members.json";
+const url = "data/members.json";
 
 
-// Load members from JSON
+// Fetch members JSON
 async function getMembers() {
 
     try {
 
-        const response = await fetch(membersURL);
+        const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error("Could not load member data");
+            throw new Error("Could not fetch members data");
         }
 
         const data = await response.json();
 
-        displayMembers(data.companies);
+        displayMembers(data.members);
 
     } catch (error) {
 
         console.error(error);
 
-        membersContainer.innerHTML = `
-            <p>Unable to load business directory.</p>
-        `;
+        membersContainer.innerHTML =
+            "<p>Unable to load business directory.</p>";
 
     }
 
 }
 
 
-// Create business cards
-function displayMembers(companies) {
-
+// Display members
+function displayMembers(members) {
 
     membersContainer.innerHTML = "";
 
 
-    companies.forEach(company => {
+    members.forEach(member => {
 
 
         const card = document.createElement("article");
@@ -50,25 +47,24 @@ function displayMembers(companies) {
         card.classList.add("member-card");
 
 
-        let membershipLevel;
+        let membershipText;
 
 
-        switch (company.membership) {
+        if (member.membership === 1) {
 
-            case 1:
-                membershipLevel = "Member";
-                break;
+            membershipText = "Member";
 
-            case 2:
-                membershipLevel = "Silver Member";
-                break;
+        } else if (member.membership === 2) {
 
-            case 3:
-                membershipLevel = "Gold Member";
-                break;
+            membershipText = "Silver Member";
 
-            default:
-                membershipLevel = "Unknown";
+        } else if (member.membership === 3) {
+
+            membershipText = "Gold Member";
+
+        } else {
+
+            membershipText = "Unknown";
 
         }
 
@@ -76,38 +72,50 @@ function displayMembers(companies) {
         card.innerHTML = `
 
             <img 
-            src="images/companies/${company.image}" 
-            alt="${company.name} logo"
+            src="images/companies/${member.image}" 
+            alt="${member.name} logo"
             loading="lazy">
 
 
-            <h3>${company.name}</h3>
+            <h3>${member.name}</h3>
 
 
             <p>
-                ${company.description}
+                ${member.tagline}
+            </p>
+
+
+            <p>
+                <strong>Category:</strong>
+                ${member.category}
             </p>
 
 
             <p>
                 <strong>Address:</strong>
-                ${company.address}
+                ${member.address}
             </p>
 
 
             <p>
                 <strong>Phone:</strong>
-                ${company.phone}
+                ${member.phone}
+            </p>
+
+
+            <p>
+                <strong>Founded:</strong>
+                ${member.founded}
             </p>
 
 
             <p>
                 <strong>Membership:</strong>
-                ${membershipLevel}
+                ${membershipText}
             </p>
 
 
-            <a href="${company.website}" target="_blank">
+            <a href="${member.url}" target="_blank">
                 Visit Website
             </a>
 
@@ -119,12 +127,11 @@ function displayMembers(companies) {
 
     });
 
-
 }
 
 
 
-// Change to Grid View
+// Grid View
 gridButton.addEventListener("click", () => {
 
     membersContainer.classList.add("grid");
@@ -135,8 +142,7 @@ gridButton.addEventListener("click", () => {
 
 
 
-
-// Change to List View
+// List View
 listButton.addEventListener("click", () => {
 
     membersContainer.classList.add("list");
@@ -147,8 +153,7 @@ listButton.addEventListener("click", () => {
 
 
 
-
-// Footer current year
+// Footer Year
 const currentYear = document.querySelector("#currentyear");
 
 if (currentYear) {
@@ -158,17 +163,15 @@ if (currentYear) {
 }
 
 
+// Footer Last Modified
+const lastModified = document.querySelector("#lastModified");
 
-// Footer last modification
-const modified = document.querySelector("#lastModified");
+if (lastModified) {
 
-if (modified) {
-
-    modified.textContent =
+    lastModified.textContent =
         `Last Modification: ${document.lastModified}`;
 
 }
-
 
 
 // Start
