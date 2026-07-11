@@ -1,0 +1,67 @@
+{
+    "companies": [
+        {
+            "name": "Mozal Aluminium",
+            "address": "Beluluane Industrial Park, Matola",
+            "phone": "+258 21 000000",
+            "website": "https://www.mozal.com",
+            "image": "mozal.jpg",
+            "membership": 3,
+            "description": "Empresa de produção de alumínio."
+        },
+        {
+            "name": "Vodacom Mozambique",
+            "address": "Rua dos Desportistas, Maputo",
+            "phone": "+258 84 0000000",
+            "website": "https://www.vm.co.mz",
+            "image": "vodacom.jpg",
+            "membership": 3,
+            "description": "Empresa de telecomunicações móveis."
+        },
+        {
+            "name": "Movitel Mozambique",
+            "address": "Rua dos Desportistas, Maputo",
+            "phone": "+258 86 0000000",
+            "website": "https://www.movitel.co.mz",
+            "image": "movitel.jpg",
+            "membership": 2,
+            "description": "Serviços de comunicação e internet."
+        },
+        {
+            "name": "Tmcel Mozambique",
+            "address": "Rua Belmiro Obadias Muianga, Maputo",
+            "phone": "+258 82 1001000",
+            "website": "https://www.tmcel.mz",
+            "image": "tmcel.jpg",
+            "membership": 2,
+            "description": "Operadora nacional de telecomunicações."
+        },
+        {
+            "name": "Electricidade de Moçambique (EDM)",
+            "address": "Av. Eduardo Mondlane, Maputo",
+            "phone": "+258 21 350000",
+            "website": "https://www.edm.co.mz",
+            "image": "edm.jpg",
+            "membership": 3,
+            "description": "Empresa responsável pela distribuição de energia elétrica."
+        },
+        {
+            "name": "Millennium BIM",
+            "address": "Av. 25 de Setembro, Maputo",
+            "phone": "+258 21 350000",
+            "website": "https://www.millenniumbim.co.mz",
+            "image": "bim.jpg",
+            "membership": 2,
+            "description": "Banco comercial em Moçambique."
+        },
+        {
+            "name": "Shoprite Mozambique",
+            "address": "Matola, Maputo",
+            "phone": "+258 21 000000",
+            "website": "https://www.shoprite.co.za",
+            "image": "shoprite.jpg",
+            "membership": 1,
+            "description": "Rede de supermercados."
+        }
+    ]
+}
