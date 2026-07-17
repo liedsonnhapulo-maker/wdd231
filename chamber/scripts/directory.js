@@ -39,7 +39,10 @@ function displayMembers(members) {
 
     membersContainer.innerHTML = "";
 
-    members.forEach(member => {
+    const fragment = document.createDocumentFragment();
+
+
+    members.forEach((member, index) => {
 
         const card = document.createElement("article");
 
@@ -48,50 +51,96 @@ function displayMembers(members) {
 
         let membershipText;
 
+
         if (member.membership === 1) {
+
             membershipText = "Member";
-        }
-        else if (member.membership === 2) {
+
+        } else if (member.membership === 2) {
+
             membershipText = "Silver Member";
-        }
-        else if (member.membership === 3) {
+
+        } else if (member.membership === 3) {
+
             membershipText = "Gold Member";
-        }
-        else {
+
+        } else {
+
             membershipText = "Unknown";
+
         }
+
+
+        const loading = index === 0 ? "eager" : "lazy";
+
+        const fetchPriority = index === 0
+            ? 'fetchpriority="high"'
+            : "";
 
 
         card.innerHTML = `
+
             <img 
-            src="images/companies/${member.image}" 
+            src="images/companies/${member.image}"
             alt="${member.name} logo"
-            loading="lazy">
+            width="300"
+            height="180"
+            loading="${loading}"
+            ${fetchPriority}>
+
 
             <h2>${member.name}</h2>
 
+
             <p>${member.tagline}</p>
 
-            <p><strong>Category:</strong> ${member.category}</p>
 
-            <p><strong>Address:</strong> ${member.address}</p>
+            <p>
+            <strong>Category:</strong>
+            ${member.category}
+            </p>
 
-            <p><strong>Phone:</strong> ${member.phone}</p>
 
-            <p><strong>Founded:</strong> ${member.founded}</p>
+            <p>
+            <strong>Address:</strong>
+            ${member.address}
+            </p>
 
-            <p><strong>Membership:</strong> ${membershipText}</p>
 
-            <a href="${member.url}" target="_blank">
+            <p>
+            <strong>Phone:</strong>
+            ${member.phone}
+            </p>
+
+
+            <p>
+            <strong>Founded:</strong>
+            ${member.founded}
+            </p>
+
+
+            <p>
+            <strong>Membership:</strong>
+            ${membershipText}
+            </p>
+
+
+            <a href="${member.url}" target="_blank" rel="noopener">
                 Visit Website
             </a>
+
         `;
 
-        membersContainer.appendChild(card);
+
+        fragment.appendChild(card);
 
     });
 
+
+    membersContainer.appendChild(fragment);
+
 }
+
 
 
 if (gridButton) {
@@ -102,9 +151,15 @@ if (gridButton) {
 
         membersContainer.classList.remove("list");
 
+
+        gridButton.setAttribute("aria-pressed", "true");
+
+        listButton.setAttribute("aria-pressed", "false");
+
     });
 
 }
+
 
 
 if (listButton) {
@@ -115,12 +170,18 @@ if (listButton) {
 
         membersContainer.classList.remove("grid");
 
+
+        listButton.setAttribute("aria-pressed", "true");
+
+        gridButton.setAttribute("aria-pressed", "false");
+
     });
 
 }
 
 
-if (hamburger) {
+
+if (hamburger && navigation) {
 
     hamburger.addEventListener("click", () => {
 
@@ -128,18 +189,29 @@ if (hamburger) {
 
         hamburger.classList.toggle("show");
 
+
+        const expanded = hamburger.classList.contains("show");
+
+        hamburger.setAttribute(
+            "aria-expanded",
+            expanded
+        );
+
     });
 
 }
+
 
 
 const currentYear = document.querySelector("#currentyear");
 
 if (currentYear) {
 
-    currentYear.textContent = new Date().getFullYear();
+    currentYear.textContent =
+        new Date().getFullYear();
 
 }
+
 
 
 const lastModified = document.querySelector("#lastModified");
@@ -150,6 +222,7 @@ if (lastModified) {
         `Last Modification: ${document.lastModified}`;
 
 }
+
 
 
 getMembers();
