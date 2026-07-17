@@ -68,7 +68,7 @@ function displayMembers(members) {
             alt="${member.name} logo"
             loading="lazy">
 
-            <h3>${member.name}</h3>
+            <h2>${member.name}</h2>
 
             <p>${member.tagline}</p>
 
