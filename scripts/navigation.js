@@ -141,3 +141,46 @@ document.querySelector("#currentyear").textContent =
 // Footer last modified
 document.querySelector("#lastModified").textContent =
     "Last Modified: " + document.lastModified;
+
+// Modal
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Certificate:</strong> ${course.certificate || "Web and Computer Programming"}</p>
+        <p>${course.description || "Course information available."}</p>
+        <p><strong>Technologies:</strong> ${course.technology ? course.technology.join(", ") : "HTML, CSS, JavaScript"}</p>
+    `;
+
+    courseDetails.showModal();
+
+    const closeModal = document.querySelector("#closeModal");
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+
+}
+
+
+// Close modal when clicking outside
+courseDetails.addEventListener("click", (event) => {
+    if (event.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
+
+// Open modal when clicking a course
+document.querySelectorAll("#course-list li").forEach((courseDiv, index) => {
+
+    courseDiv.addEventListener("click", () => {
+        displayCourseDetails(courses[index]);
+    });
+
+});
