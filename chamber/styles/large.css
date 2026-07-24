@@ -158,5 +158,21 @@
 
     }
 
+    .membership-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+
+    .membership-container h2 {
+        grid-column: 1 / -1;
+    }
+
+
+    .membership-card {
+        margin-bottom: 0;
+    }
+
 
 }
