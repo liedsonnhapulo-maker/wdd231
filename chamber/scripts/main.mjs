@@ -3,6 +3,10 @@ import { getWeather } from "./weather.mjs";
 import { getSpotlights } from "./spotlight.mjs";
 
 
+document.querySelector("#joinButton").addEventListener("click", () => {
+    window.location.href = "join.html";
+});
+
 getWeather();
 
 getSpotlights();
