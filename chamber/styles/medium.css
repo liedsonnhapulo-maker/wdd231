@@ -1,0 +1,97 @@
+/* =========================
+   DISCOVER PAGE
+   MEDIUM SCREENS
+   641px - 1024px
+========================= */
+
+@media screen and (min-width:641px) {
+
+
+    #myplace {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1.5rem;
+
+    }
+
+
+
+    #myplace article {
+
+        display: grid;
+
+        gap: 1rem;
+
+        grid-template-areas:
+
+            "title"
+
+            "image"
+
+            "description"
+
+            "address";
+
+    }
+
+
+
+    #myplace h2 {
+
+        grid-area: title;
+
+    }
+
+
+
+    #myplace figure {
+
+        grid-area: image;
+
+        margin: 0;
+
+    }
+
+
+
+    #myplace img {
+
+        width: 100%;
+
+        height: 220px;
+
+        object-fit: cover;
+
+        border-radius: 10px;
+
+    }
+
+
+
+    #myplace p {
+
+        grid-area: description;
+
+        line-height: 1.5;
+
+    }
+
+
+
+    #myplace address {
+
+        grid-area: address;
+
+        font-style: normal;
+
+        font-weight: bold;
+
+        margin-top: auto;
+
+    }
+
+
+}

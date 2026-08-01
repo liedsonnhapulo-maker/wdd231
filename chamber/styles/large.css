@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
 
 
     /* HEADER */
@@ -173,6 +173,119 @@
     .membership-card {
         margin-bottom: 0;
     }
-
+        #myplace {
+    
+            display: grid;
+    
+            grid-template-columns: 1fr;
+    
+            gap: 2rem;
+    
+        }
+    
+    
+    
+        #myplace article {
+    
+            display: grid;
+    
+            grid-template-columns: 300px 1fr;
+    
+            gap: 2rem;
+    
+            align-items: center;
+    
+    
+            grid-template-areas:
+    
+                "image title"
+    
+                "image description"
+    
+                "image address";
+    
+    
+            background: white;
+    
+            padding: 1.5rem;
+    
+            border-radius: 10px;
+    
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    
+        }
+    
+    
+    
+        /* Imagem esquerda */
+    
+        #myplace figure {
+    
+            grid-area: image;
+    
+            margin: 0;
+    
+        }
+    
+    
+        #myplace img {
+    
+            width: 300px;
+    
+            height: 200px;
+    
+            object-fit: cover;
+    
+            border-radius: 10px;
+    
+        }
+    
+    
+    
+        /* Texto direita */
+    
+        #myplace h2 {
+    
+            grid-area: title;
+    
+            color: #003566;
+    
+        }
+    
+    
+    
+        #myplace p {
+    
+            grid-area: description;
+    
+            line-height: 1.5;
+    
+        }
+    
+    
+    
+        #myplace address {
+    
+            grid-area: address;
+    
+            font-style: normal;
+    
+            font-weight: bold;
+    
+        }
+    
+    
+    
+        /* Hover somente desktop */
+    
+        #myplace img:hover {
+    
+            transform: scale(1.05);
+    
+            filter: brightness(.8);
+    
+            transition: .3s;
+    
+        }
 
 }
