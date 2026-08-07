@@ -1,0 +1,207 @@
+@media screen and (min-width: 768px) {
+
+    /* ===========================
+       HEADER
+    =========================== */
+
+    header {
+        padding: 1rem 3rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .navigation a {
+        padding: .7rem 1rem;
+    }
+
+
+    /* ===========================
+       MAIN
+    =========================== */
+
+    section {
+        margin: 2rem 3rem;
+        padding: 2.5rem;
+    }
+
+
+    /* ===========================
+       HERO
+    =========================== */
+
+    .hero img {
+        height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+
+    /* ===========================
+       WHY
+    =========================== */
+
+    .reason>img {
+        max-width: 700px;
+        height: 350px;
+        margin: 2rem auto;
+    }
+
+    .reason h2,
+    .reason h3,
+    .reason p {
+        text-align: center;
+    }
+
+    .reason-icons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    /* ===========================
+       SOLUTIONS
+    =========================== */
+
+    #showHere {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        align-items: stretch;
+    }
+
+    .solution-card {
+        height: 100%;
+    }
+
+    .solution-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .solution-card h3,
+    .solution-card h4 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .solution-card p {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+
+    /* ===========================
+       SMART ENERGY
+    =========================== */
+
+    #smartContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .smart-card {
+        height: 100%;
+    }
+
+    .smart-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
+
+    /* ===========================
+       SMART BENEFITS
+    =========================== */
+
+    #benefitsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .benefit-card {
+        min-height: 220px;
+    }
+
+    .benefit-card img,
+    #benefitsContainer img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+
+    /* ===========================
+       BENEFITS
+    =========================== */
+
+    #benefit {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    #benefit article {
+        min-height: 220px;
+    }
+
+
+    /* ===========================
+       HOW IT WORKS
+    =========================== */
+
+    #work {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    #work article {
+        min-height: 220px;
+    }
+
+
+    /* ===========================
+       CONTACT
+    =========================== */
+
+    .contact {
+        max-width: 750px;
+        margin: auto;
+    }
+
+
+    /* ===========================
+       THANK YOU
+    =========================== */
+
+    .thankyou {
+        max-width: 750px;
+        margin: auto;
+    }
+
+
+    /* ===========================
+       FOOTER
+    =========================== */
+
+    footer {
+        padding: 3rem;
+    }
+
+}

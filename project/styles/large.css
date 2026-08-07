@@ -1,0 +1,424 @@
+@media screen and (min-width: 1024px) {
+
+    /* ===========================
+       HEADER
+    =========================== */
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .navigation a {
+        padding: .7rem 1.2rem;
+    }
+
+
+    /* ===========================
+       MAIN
+    =========================== */
+
+    main {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    section {
+        margin: 3rem auto;
+        padding: 3rem;
+    }
+
+
+    /* ===========================
+       HERO
+    =========================== */
+
+    .hero img {
+        height: 600px;
+    }
+
+    .hero-content {
+        max-width: 900px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
+    }
+
+
+    /* ===========================
+       WHY SECTION
+    =========================== */
+
+    .reason {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "image title"
+            "image subtitle"
+            "image text"
+            "image icons";
+
+        gap: 1.5rem 3rem;
+
+        align-items: center;
+
+        text-align: left;
+    }
+
+    .reason h2 {
+        grid-area: title;
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .reason h3 {
+        grid-area: subtitle;
+        text-align: left;
+    }
+
+    .reason p {
+        grid-area: text;
+        text-align: left;
+    }
+
+    .reason>img {
+        grid-area: image;
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 0;
+    }
+
+    .reason-icons {
+        grid-area: icons;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1rem;
+    }
+
+    .icon-card {
+        padding: 1.2rem;
+        box-shadow: var(--shadow);
+        transition: .3s;
+    }
+
+    .icon-card:hover {
+        transform: translateY(-5px);
+    }
+
+
+/* ===========================
+       SOLUTIONS HERO
+    =========================== */
+
+.solutions-hero {
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.solutions-hero h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.solutions-hero p {
+    max-width: 800px;
+    margin: auto;
+    color: white;
+    font-size: 1.1rem;
+}
+
+
+/* ===========================
+       SOLUTIONS CARDS
+       IMAGE LEFT / TEXT RIGHT
+    =========================== */
+
+#showHere {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.solution-card {
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    gap: 2.5rem;
+
+    align-items: center;
+
+    padding: 1.5rem;
+
+    min-height: 280px;
+}
+
+.solution-card img {
+    width: 320px;
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.solution-card h3,
+.solution-card h4 {
+    text-align: right;
+
+    color: var(--primary);
+
+    margin-bottom: 1rem;
+}
+
+.solution-card p {
+    text-align: right;
+
+    padding: 0;
+
+    line-height: 1.7;
+}
+
+.solution-card ul {
+    padding: 0;
+
+    list-style: none;
+
+    text-align: right;
+}
+
+.solution-card li {
+    background: #F5F9F5;
+
+    padding: .6rem;
+
+    margin: .4rem 0;
+
+    border-radius: 8px;
+
+    text-align: right;
+}
+
+.solution-card li::before {
+    content: "✓";
+
+    color: var(--secondary);
+
+    font-weight: bold;
+
+    margin-right: .5rem;
+}
+
+
+/* ===========================
+       SMART ENERGY HERO
+    =========================== */
+
+.smart-hero {
+    padding: 5rem 3rem;
+
+    text-align: center;
+}
+
+.smart-hero h1 {
+    font-size: 3rem;
+
+    color: white;
+
+    margin-bottom: 1rem;
+}
+
+.smart-hero p {
+    max-width: 800px;
+
+    margin: auto;
+
+    color: white;
+
+    font-size: 1.1rem;
+}
+
+
+/* ===========================
+       SMART ENERGY CARDS
+       IMAGE LEFT / TEXT RIGHT
+    =========================== */
+
+#smartContainer {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+}
+
+.smart-card {
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    gap: 2.5rem;
+
+    align-items: center;
+
+    padding: 1.5rem;
+
+    min-height: 280px;
+}
+
+.smart-card img {
+    width: 320px;
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.smart-card h3,
+.smart-card h4 {
+    text-align: right;
+
+    color: var(--primary);
+
+    margin-bottom: 1rem;
+}
+
+.smart-card p {
+    text-align: right;
+
+    padding: 0;
+
+    line-height: 1.7;
+}
+
+.smart-card ul {
+    padding: 0;
+
+    list-style: none;
+
+    text-align: right;
+}
+
+.smart-card li {
+    background: #F5F9F5;
+
+    padding: .6rem;
+
+    margin: .4rem 0;
+
+    border-radius: 8px;
+
+    text-align: right;
+}
+
+.smart-card li::before {
+    content: "✓";
+
+    color: var(--secondary);
+
+    font-weight: bold;
+
+    margin-right: .5rem;
+}
+
+
+/* ===========================
+       SMART ENERGY BENEFITS
+    =========================== */
+
+#benefitsContainer {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    padding: 1.5rem;
+
+    min-height: 200px;
+
+    text-align: center;
+}
+
+.benefit-card img,
+#benefitsContainer img {
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    margin: 0 auto 1rem;
+}
+
+.benefit-card h3,
+.benefit-card h4 {
+    text-align: center;
+
+    color: var(--primary);
+}
+
+/* ===========================
+SMART BENEFITS
+=========================== */
+
+#benefitsContainer {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.benefit-card {
+    text-align: right;
+}
+
+.benefit-card h3,
+.benefit-card h4,
+.benefit-card p {
+    text-align: right;
+}
+    /* ===========================
+       FOOTER
+    =========================== */
+
+    footer {
+        padding: 3rem;
+    }
+
+    .social img {
+        width: 35px;
+        height: 35px;
+    }
+
+}
