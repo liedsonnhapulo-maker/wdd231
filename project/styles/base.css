@@ -1,4 +1,3 @@
-
 /* ===========================
    GOOGLE FONTS
 =========================== */
@@ -11,21 +10,15 @@
 =========================== */
 
 :root {
-
     --primary: #032B55;
     --secondary: #2E7D32;
     --accent: #FFC107;
-
     --background: #F5F9F5;
     --white: #FFFFFF;
-
     --text: #263238;
     --border: #DCE8DD;
-
     --shadow: 0 8px 20px rgba(0, 0, 0, .12);
-
     --radius: 15px;
-
     --heading: "Poppins", sans-serif;
     --body: "Open Sans", sans-serif;
 }
@@ -41,7 +34,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: var(--body);
     background: var(--background);
@@ -49,12 +41,10 @@ body {
     line-height: 1.6;
 }
 
-
 img {
     display: block;
     max-width: 100%;
 }
-
 
 h1,
 h2,
@@ -62,7 +52,6 @@ h3,
 h4 {
     font-family: var(--heading);
 }
-
 
 p {
     margin-bottom: 1rem;
@@ -82,19 +71,16 @@ header {
     position: relative;
 }
 
-
 .logo {
     display: flex;
     align-items: center;
     gap: .7rem;
 }
 
-
 .logo img {
     width: 55px;
     height: 55px;
 }
-
 
 .logo span {
     color: white;
@@ -116,11 +102,9 @@ header {
     cursor: pointer;
 }
 
-
 .hamburger::before {
     content: "☰";
 }
-
 
 .hamburger.show::before {
     content: "✖";
@@ -128,7 +112,7 @@ header {
 
 
 /* ===========================
-   NAVIGATION MOBILE
+   NAVIGATION
 =========================== */
 
 .navigation {
@@ -142,11 +126,9 @@ header {
     z-index: 20;
 }
 
-
 .navigation.open {
     display: block;
 }
-
 
 .navigation ul {
     list-style: none;
@@ -155,7 +137,6 @@ header {
     gap: .5rem;
 }
 
-
 .navigation a {
     color: white;
     text-decoration: none;
@@ -163,7 +144,6 @@ header {
     display: block;
     border-radius: 10px;
 }
-
 
 .navigation a:hover,
 .navigation a.active {
@@ -180,7 +160,6 @@ main {
     width: 100%;
 }
 
-
 section {
     background: var(--white);
     margin: 1.5rem 1rem;
@@ -189,13 +168,11 @@ section {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     color: var(--primary);
     text-align: center;
     margin-bottom: .5rem;
 }
-
 
 h3 {
     color: var(--secondary);
@@ -214,14 +191,12 @@ h3 {
     overflow: hidden;
 }
 
-
 .hero img {
     width: 100%;
     height: 450px;
     object-fit: cover;
     filter: brightness(.5);
 }
-
 
 .hero-content {
     position: absolute;
@@ -232,12 +207,10 @@ h3 {
     text-align: center;
 }
 
-
 .hero h1 {
     color: white;
     font-size: 2rem;
 }
-
 
 .hero p {
     color: white;
@@ -245,7 +218,7 @@ h3 {
 
 
 /* ===========================
-   BUTTONS
+   BUTTON
 =========================== */
 
 .cta {
@@ -258,7 +231,6 @@ h3 {
     text-decoration: none;
     font-weight: 600;
 }
-
 
 .cta:hover {
     background: #1B5E20;
@@ -273,7 +245,6 @@ h3 {
     text-align: center;
 }
 
-
 .reason>img {
     width: 100%;
     height: 300px;
@@ -282,13 +253,11 @@ h3 {
     margin: 2rem 0;
 }
 
-
 .reason-icons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
-
 
 .icon-card {
     background: white;
@@ -297,7 +266,6 @@ h3 {
     padding: 1rem;
     text-align: center;
 }
-
 
 .icon-card img {
     width: 55px;
@@ -316,12 +284,10 @@ h3 {
     text-align: center;
     color: white;
     padding: 3rem 1rem;
-    background:
-        linear-gradient(rgba(3, 43, 85, .8),
+    background: linear-gradient(rgba(3, 43, 85, .8),
             rgba(3, 43, 85, .8));
     border-radius: 15px;
 }
-
 
 .solutions-hero h1,
 .smart-hero h1 {
@@ -329,7 +295,6 @@ h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
-
 
 .solutions-hero p,
 .smart-hero p {
@@ -340,82 +305,17 @@ h3 {
 
 
 /* ===========================
-   SOLUTIONS
+   SOLUTIONS & SMART CARDS
 =========================== */
 
-#showHere {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-
-.solution-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-
-.solution-card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
-
-
-.solution-card h3,
-.solution-card h4 {
-    color: var(--primary);
-    text-align: center;
-    margin: 1rem 0;
-}
-
-
-.solution-card p {
-    text-align: center;
-    padding: 0 1rem;
-    flex-grow: 1;
-}
-
-
-.solution-card ul {
-    list-style: none;
-    padding: 1rem;
-}
-
-
-.solution-card li {
-    background: #F5F9F5;
-    margin: .5rem 0;
-    padding: .6rem;
-    border-radius: 8px;
-}
-
-
-.solution-card li::before {
-    content: "✓";
-    color: var(--secondary);
-    font-weight: bold;
-    margin-right: .5rem;
-}
-
-
-/* ===========================
-   SMART ENERGY
-=========================== */
-
+#showHere,
 #smartContainer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-
+.solution-card,
 .smart-card {
     background: white;
     border-radius: 15px;
@@ -426,21 +326,23 @@ h3 {
     height: 100%;
 }
 
-
+.solution-card img,
 .smart-card img {
     width: 100%;
     height: 230px;
     object-fit: cover;
 }
 
-
-.smart-card h3 {
+.solution-card h3,
+.solution-card h4,
+.smart-card h3,
+.smart-card h4 {
     color: var(--primary);
     text-align: center;
     margin: 1rem 0;
 }
 
-
+.solution-card p,
 .smart-card p {
     text-align: center;
     padding: 0 1rem;
@@ -448,20 +350,27 @@ h3 {
 }
 
 
-.smart-card ul {
+/* ===========================
+   CARD BENEFITS
+=========================== */
+
+.solution-card ul,
+.smart-card ul,
+.benefit-card ul {
     list-style: none;
     padding: 1rem;
 }
 
-
-.smart-card li {
+.solution-card li,
+.smart-card li,
+.benefit-card li {
     background: #F5F9F5;
     margin: .5rem 0;
     padding: .6rem;
     border-radius: 8px;
 }
 
-
+.solution-card li::before,
 .smart-card li::before {
     content: "✓";
     color: var(--secondary);
@@ -469,9 +378,14 @@ h3 {
     margin-right: .5rem;
 }
 
+#benefit img {
+    width: 45px;
+    height: 45px;
+    margin: auto auto 1rem;
+}
 
 /* ===========================
-   SMART ENERGY BENEFITS
+   SMART BENEFITS
 =========================== */
 
 #benefitsContainer {
@@ -479,7 +393,6 @@ h3 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
-
 
 .benefit-card {
     background: white;
@@ -489,7 +402,6 @@ h3 {
     box-shadow: var(--shadow);
 }
 
-
 .benefit-card img,
 #benefitsContainer img {
     width: 60px;
@@ -498,51 +410,8 @@ h3 {
     margin: 0 auto 1rem;
 }
 
-
 .benefit-card h3 {
     color: var(--primary);
-}
-
-
-.benefit-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-
-.benefit-card li {
-    background: #F5F9F5;
-    padding: .6rem;
-    margin: .5rem 0;
-    border-radius: 8px;
-}
-
-
-/* ===========================
-   BENEFITS
-=========================== */
-
-#benefit {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-
-#benefit article {
-    background: white;
-    border-radius: 15px;
-    padding: 1.5rem;
-    text-align: center;
-    min-height: 250px;
-}
-
-
-#benefit img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    margin: auto auto 1rem;
 }
 
 
@@ -556,7 +425,6 @@ h3 {
     gap: 1.5rem;
 }
 
-
 #work article {
     background: white;
     border-radius: 15px;
@@ -564,7 +432,6 @@ h3 {
     text-align: center;
     min-height: 250px;
 }
-
 
 #work img {
     width: 80px;
@@ -588,7 +455,6 @@ form {
     gap: 1.2rem;
 }
 
-
 form label {
     display: flex;
     flex-direction: column;
@@ -596,7 +462,6 @@ form label {
     color: var(--primary);
     font-weight: 600;
 }
-
 
 form input,
 form select,
@@ -610,20 +475,17 @@ form textarea {
     border-radius: 10px;
 }
 
-
 form input:required,
 form select:required,
 form textarea:required {
     border-left: 5px solid #dc3545;
 }
 
-
 form input:required:valid,
 form select:required:valid,
 form textarea:required:valid {
     border-left: 5px solid #28a745;
 }
-
 
 form input:focus,
 form select:focus,
@@ -633,39 +495,35 @@ form textarea:focus {
     background: white;
 }
 
-
 form textarea {
     height: 140px;
     resize: vertical;
 }
 
-
 form input[type="submit"] {
-    background: #2E7D32;
+    background: #0d6efd;
     color: white;
     border: none;
-    padding: .8rem;
+    padding: 1.1rem;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    transition: background .3s ease;
 }
 
-
 form input[type="submit"]:hover {
-    background: #1B5E20;
-    color: white;
+    background: #0b5ed7;
 }
 
 
 /* ===========================
-   CONTACT SECTION
+   CONTACT
 =========================== */
 
 .contact {
     max-width: 750px;
     margin: auto;
 }
-
 
 .contact h1,
 .contact h2,
@@ -675,7 +533,7 @@ form input[type="submit"]:hover {
 
 
 /* ===========================
-   THANK YOU PAGE
+   THANK YOU
 =========================== */
 
 .thankyou {
@@ -683,7 +541,6 @@ form input[type="submit"]:hover {
     margin: auto;
     text-align: center;
 }
-
 
 #msg {
     margin-top: 2rem;
@@ -693,7 +550,6 @@ form input[type="submit"]:hover {
     box-shadow: var(--shadow);
     text-align: left;
 }
-
 
 #msg p {
     margin-bottom: 1rem;
@@ -730,7 +586,6 @@ dialog {
     box-shadow: var(--shadow);
 }
 
-
 dialog::backdrop {
     background: rgba(0, 0, 0, .5);
 }
@@ -747,16 +602,13 @@ footer {
     padding: 2rem 1rem;
 }
 
-
 .social {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-
 .social img {
     width: 30px;
     height: 30px;
 }
-

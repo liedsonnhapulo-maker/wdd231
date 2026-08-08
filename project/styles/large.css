@@ -1,69 +1,176 @@
-@media screen and (min-width: 1024px) {
+/* ===========================
+   LARGE SCREENS (Desktop/Tablet)
+   Base file: large.css
+   Breakpoint: 1024px and up
+=========================== */
+
+@media (min-width: 1024px) {
 
     /* ===========================
        HEADER
     =========================== */
 
     header {
-        padding: 1rem 5%;
+        padding: 1.2rem 3rem;
     }
+
+    .logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo span {
+        font-size: 1.3rem;
+    }
+
+
+    /* ===========================
+       HAMBURGER (hidden on large)
+    =========================== */
 
     .hamburger {
         display: none;
     }
 
+
+    /* ===========================
+       NAVIGATION
+    =========================== */
+
     .navigation {
         display: block;
         position: static;
         width: auto;
+        background: none;
         padding: 0;
-        box-shadow: none;
     }
 
     .navigation ul {
-        display: flex;
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .navigation a {
-        padding: .7rem 1.2rem;
+        padding: .5rem 1rem;
+        color: white;
+    }
+
+    .navigation a:hover,
+    .navigation a.active {
+        background: var(--accent);
+        color: #111;
     }
 
 
     /* ===========================
-       MAIN
+       MAIN / SECTIONS
     =========================== */
 
-    main {
-        max-width: 1400px;
-        margin: auto;
+    section {
+        margin: 2rem auto;
+        padding: 3rem;
+        max-width: 1200px;
     }
 
-    section {
-        margin: 3rem auto;
-        padding: 3rem;
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
     }
 
 
     /* ===========================
-       HERO
+       HERO (index.html)
     =========================== */
 
     .hero img {
-        height: 600px;
+        height: 650px;
     }
 
     .hero-content {
-        max-width: 900px;
+        width: 70%;
+        max-width: 800px;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    /* ===========================
+       SOLUTIONS HERO (solutions.html)
+    =========================== */
+
+    .solutions-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .solutions-hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(.5);
+        z-index: 1;
+    }
+
+    .solutions-hero h1,
+    .solutions-hero p {
+        position: relative;
+        z-index: 2;
+    }
+
+    .solutions-hero h1 {
+        font-size: 3rem;
+    }
+
+    .solutions-hero p {
         font-size: 1.15rem;
+    }
+
+
+    /* ===========================
+       SMART HERO (smart.html)
+    =========================== */
+
+    .smart-hero {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 1.5rem auto;
+    }
+
+    .smart-hero h1 {
+        font-size: 3rem;
+    }
+
+    .smart-hero p {
+        font-size: 1.15rem;
+    }
+
+
+    /* ===========================
+       BUTTON
+    =========================== */
+
+    .cta {
+        padding: 1rem 2.2rem;
+        font-size: 1.1rem;
     }
 
 
@@ -72,353 +179,514 @@
     =========================== */
 
     .reason {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        grid-template-areas:
-            "image title"
-            "image subtitle"
-            "image text"
-            "image icons";
-
-        gap: 1.5rem 3rem;
-
-        align-items: center;
-
-        text-align: left;
-    }
-
-    .reason h2 {
-        grid-area: title;
-        text-align: left;
-        font-size: 2rem;
-    }
-
-    .reason h3 {
-        grid-area: subtitle;
-        text-align: left;
-    }
-
-    .reason p {
-        grid-area: text;
-        text-align: left;
+        max-width: 1000px;
+        margin: auto;
     }
 
     .reason>img {
-        grid-area: image;
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-        border-radius: 20px;
-        margin: 0;
+        height: 400px;
     }
 
     .reason-icons {
-        grid-area: icons;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
     }
 
     .icon-card {
-        padding: 1.2rem;
-        box-shadow: var(--shadow);
+        padding: 1.5rem;
+    }
+
+    .icon-card img {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    /* ===========================
+       RENEWABLE ENERGY SOLUTIONS
+       #solutionsContainer (solutions.html)
+       Grid-template-areas card: image left,
+       title / description / details / benefits right
+    =========================== */
+
+    #solutionsContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 950px;
+        margin: 0 auto;
+    }
+
+    #solutionsContainer .solution-card {
+
+        display: grid;
+
+        grid-template-columns: 400px 1fr;
+
+        gap: 2rem;
+
+        align-items: center;
+
+
+        grid-template-areas:
+
+            "image title"
+
+            "image description"
+
+            "image details"
+
+            "image benefits-title"
+
+            "image benefits";
+
+
+        background: white;
+
+        padding: 1.5rem;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+
+    }
+
+
+    /* Imagem esquerda */
+
+    #solutionsContainer .solution-card img {
+
+        grid-area: image;
+
+        width: 400px;
+
+        max-width: 400px;
+
+        height: 300px;
+
+        object-fit: cover;
+
+        border-radius: 10px;
+
+    }
+
+
+    /* Texto direita */
+
+    #solutionsContainer .solution-card h3 {
+
+        grid-area: title;
+
+        color: var(--primary);
+
+        text-align: left;
+
+        margin: 0;
+
+    }
+
+
+    #solutionsContainer .solution-card p.description {
+
+        grid-area: description;
+
+        line-height: 1.5;
+
+        text-align: left;
+
+        padding: 0;
+
+        margin: 0;
+
+    }
+
+
+    #solutionsContainer .solution-card p.details {
+
+        grid-area: details;
+
+        line-height: 1.5;
+
+        text-align: left;
+
+        padding: 0;
+
+        margin: 0;
+
+    }
+
+
+    #solutionsContainer .solution-card h4 {
+
+        grid-area: benefits-title;
+
+        color: var(--secondary);
+
+        text-align: left;
+
+        margin: 0;
+
+    }
+
+
+    #solutionsContainer .solution-card ul {
+
+        grid-area: benefits;
+
+        text-align: left;
+
+        padding: 0;
+
+        margin: 0;
+
+    }
+
+
+    /* Hover somente desktop */
+
+    #solutionsContainer .solution-card img:hover {
+
+        transform: scale(1.05);
+
+        filter: brightness(.8);
+
         transition: .3s;
+
     }
 
-    .icon-card:hover {
+
+    /* ===========================
+       FEATURED SOLUTIONS
+       #showHere (index.html) - text centered, below image
+    =========================== */
+
+    #showHere,
+    #smartContainer {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
+    }
+
+    .smart-card img {
+        height: 200px;
+    }
+
+    #showHere article {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+    }
+
+    #showHere article img {
+        height: 200px;
+    }
+
+    #showHere article h3,
+    #showHere article h4,
+    #showHere article p {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .smart-card:hover,
+    #showHere article:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+        transition: all .3s ease;
+    }
+
+
+    /* ===========================
+       HOW OUR SOLUTIONS WORK
+       #processContainer (solutions.html)
+    =========================== */
+
+    #processContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    #processContainer article,
+    #processContainer .process-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #processContainer img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+    }
+
+    #processContainer h3,
+    #processContainer h4 {
+        text-align: center;
+        color: var(--primary);
+    }
+
+    #processContainer p {
+        text-align: center;
+    }
+
+
+    /* ===========================
+       START YOUR RENEWABLE ENERGY JOURNEY
+       .solution-contact - centered text + CTA
+    =========================== */
+
+    .solution-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .solution-contact h2,
+    .solution-contact p {
+        text-align: center;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .solution-contact .cta {
+        margin-top: 1rem;
+    }
+
+
+    /* ===========================
+       BENEFITS OF RENEWABLE ENERGY
+       #benefit (index.html) & #benefitsContainer (smart.html)
+    =========================== */
+
+    #benefit,
+    #benefitsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    #benefit article,
+    #benefitsContainer article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    #benefit img,
+    #benefitsContainer img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+    }
+
+    #benefit h3,
+    #benefit h4,
+    #benefitsContainer h3,
+    #benefitsContainer h4 {
+        text-align: center;
+    }
+
+    #benefit p,
+    #benefitsContainer p {
+        text-align: center;
+    }
+
+    #benefit article:hover,
+    #benefitsContainer article:hover {
         transform: translateY(-5px);
+        transition: transform .3s ease;
     }
 
 
-/* ===========================
-       SOLUTIONS HERO
+    /* ===========================
+       HOW IT WORKS (index.html #work)
     =========================== */
 
-.solutions-hero {
-    padding: 5rem 3rem;
-    text-align: center;
-}
+    #work {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
+    }
 
-.solutions-hero h1 {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 1rem;
-}
+    #work article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: auto;
+        padding: 2rem;
+    }
 
-.solutions-hero p {
-    max-width: 800px;
-    margin: auto;
-    color: white;
-    font-size: 1.1rem;
-}
+    #work img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+    }
+
+    #work h3,
+    #work h4 {
+        text-align: center;
+    }
+
+    #work p {
+        text-align: center;
+    }
 
 
-/* ===========================
-       SOLUTIONS CARDS
-       IMAGE LEFT / TEXT RIGHT
+    /* ===========================
+       CONTACT PAGE
+       #visit-message on top (auto-inserted by visits.mjs),
+       form below, occupying more of the screen
     =========================== */
 
-#showHere {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 85vh;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
 
-.solution-card {
-    display: grid;
+    #visit-message {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        background: var(--white);
+        color: var(--primary);
+        text-align: center;
+        padding: 1.2rem;
+        border-left: 5px solid var(--secondary);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        font-weight: 600;
+    }
 
-    grid-template-columns: 320px 1fr;
+    .contact-form {
+        background: var(--white);
+        padding: 3rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-    gap: 2.5rem;
+    .contact-form label {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        color: var(--primary);
+        font-weight: 600;
+    }
 
-    align-items: center;
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        width: 100%;
+        padding: 1.1rem;
+        font-family: var(--body);
+        font-size: 1rem;
+        background: #F5F9F5;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+    }
 
-    padding: 1.5rem;
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        background: white;
+    }
 
-    min-height: 280px;
-}
+    .contact-form textarea {
+        height: 160px;
+        resize: vertical;
+    }
 
-.solution-card img {
-    width: 320px;
-    height: 240px;
+    .contact-form button[type="submit"] {
+        background: #0d6efd;
+        color: white;
+        border: none;
+        padding: 1.1rem;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background .3s ease;
+    }
 
-    object-fit: cover;
-
-    border-radius: 12px;
-}
-
-.solution-card h3,
-.solution-card h4 {
-    text-align: right;
-
-    color: var(--primary);
-
-    margin-bottom: 1rem;
-}
-
-.solution-card p {
-    text-align: right;
-
-    padding: 0;
-
-    line-height: 1.7;
-}
-
-.solution-card ul {
-    padding: 0;
-
-    list-style: none;
-
-    text-align: right;
-}
-
-.solution-card li {
-    background: #F5F9F5;
-
-    padding: .6rem;
-
-    margin: .4rem 0;
-
-    border-radius: 8px;
-
-    text-align: right;
-}
-
-.solution-card li::before {
-    content: "✓";
-
-    color: var(--secondary);
-
-    font-weight: bold;
-
-    margin-right: .5rem;
-}
+    .contact-form button[type="submit"]:hover {
+        background: #0b5ed7;
+    }
 
 
-/* ===========================
-       SMART ENERGY HERO
+    /* ===========================
+       THANK YOU
     =========================== */
 
-.smart-hero {
-    padding: 5rem 3rem;
-
-    text-align: center;
-}
-
-.smart-hero h1 {
-    font-size: 3rem;
-
-    color: white;
-
-    margin-bottom: 1rem;
-}
-
-.smart-hero p {
-    max-width: 800px;
-
-    margin: auto;
-
-    color: white;
-
-    font-size: 1.1rem;
-}
+    .thankyou {
+        max-width: 850px;
+    }
 
 
-/* ===========================
-       SMART ENERGY CARDS
-       IMAGE LEFT / TEXT RIGHT
-    =========================== */
-
-#smartContainer {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 2rem;
-}
-
-.smart-card {
-    display: grid;
-
-    grid-template-columns: 320px 1fr;
-
-    gap: 2.5rem;
-
-    align-items: center;
-
-    padding: 1.5rem;
-
-    min-height: 280px;
-}
-
-.smart-card img {
-    width: 320px;
-    height: 240px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-}
-
-.smart-card h3,
-.smart-card h4 {
-    text-align: right;
-
-    color: var(--primary);
-
-    margin-bottom: 1rem;
-}
-
-.smart-card p {
-    text-align: right;
-
-    padding: 0;
-
-    line-height: 1.7;
-}
-
-.smart-card ul {
-    padding: 0;
-
-    list-style: none;
-
-    text-align: right;
-}
-
-.smart-card li {
-    background: #F5F9F5;
-
-    padding: .6rem;
-
-    margin: .4rem 0;
-
-    border-radius: 8px;
-
-    text-align: right;
-}
-
-.smart-card li::before {
-    content: "✓";
-
-    color: var(--secondary);
-
-    font-weight: bold;
-
-    margin-right: .5rem;
-}
-
-
-/* ===========================
-       SMART ENERGY BENEFITS
-    =========================== */
-
-#benefitsContainer {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 1.5rem;
-}
-
-.benefit-card {
-    padding: 1.5rem;
-
-    min-height: 200px;
-
-    text-align: center;
-}
-
-.benefit-card img,
-#benefitsContainer img {
-    width: 55px;
-
-    height: 55px;
-
-    object-fit: contain;
-
-    margin: 0 auto 1rem;
-}
-
-.benefit-card h3,
-.benefit-card h4 {
-    text-align: center;
-
-    color: var(--primary);
-}
-
-/* ===========================
-SMART BENEFITS
-=========================== */
-
-#benefitsContainer {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.benefit-card {
-    text-align: right;
-}
-
-.benefit-card h3,
-.benefit-card h4,
-.benefit-card p {
-    text-align: right;
-}
     /* ===========================
        FOOTER
     =========================== */
 
     footer {
-        padding: 3rem;
+        padding: 3rem 2rem;
     }
 
     .social img {
         width: 35px;
         height: 35px;
     }
+}
 
+
+/* ===========================
+   EXTRA LARGE SCREENS
+   Breakpoint: 1200px and up
+=========================== */
+
+@media (min-width: 1200px) {
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    #showHere,
+    #smartContainer,
+    #benefit,
+    #benefitsContainer,
+    #work,
+    section {
+        max-width: 1300px;
+    }
 }

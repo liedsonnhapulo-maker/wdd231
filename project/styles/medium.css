@@ -1,164 +1,235 @@
-@media screen and (min-width: 768px) {
+/* ===========================
+   MEDIUM SCREENS (Tablet)
+   Base file: medium.css
+   Breakpoint: 768px and up
+=========================== */
+
+@media (min-width: 768px) {
 
     /* ===========================
        HEADER
     =========================== */
 
     header {
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
     }
 
-    .hamburger {
-        display: none;
+    .logo img {
+        width: 60px;
+        height: 60px;
     }
 
-    .navigation {
-        display: block;
-        position: static;
-        width: auto;
-        padding: 0;
-        box-shadow: none;
+    .logo span {
+        font-size: 1.1rem;
+    }
+
+
+    /* ===========================
+       NAVIGATION
+    =========================== */
+
+    .navigation.open {
+        padding: 1.5rem;
     }
 
     .navigation ul {
-        display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
     }
 
-    .navigation a {
-        padding: .7rem 1rem;
-    }
-
 
     /* ===========================
-       MAIN
+       MAIN / SECTIONS
     =========================== */
 
     section {
-        margin: 2rem 3rem;
-        padding: 2.5rem;
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
     }
 
 
     /* ===========================
-       HERO
+       HERO (index.html)
     =========================== */
 
     .hero img {
         height: 500px;
     }
 
+    .hero-content {
+        width: 80%;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
 
+    .hero p {
+        font-size: 1.05rem;
+    }
+
 
     /* ===========================
-       WHY
+       SOLUTIONS HERO (solutions.html)
+    =========================== */
+
+    .solutions-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .solutions-hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(.5);
+        z-index: 1;
+    }
+
+    .solutions-hero h1,
+    .solutions-hero p {
+        position: relative;
+        z-index: 2;
+    }
+
+    .solutions-hero h1 {
+        font-size: 2.3rem;
+    }
+
+
+    /* ===========================
+       SMART HERO (smart.html)
+    =========================== */
+
+    .smart-hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .smart-hero h1 {
+        font-size: 2.3rem;
+    }
+
+
+    /* ===========================
+       BUTTON
+    =========================== */
+
+    .cta {
+        padding: .9rem 1.8rem;
+    }
+
+
+    /* ===========================
+       WHY SECTION
     =========================== */
 
     .reason>img {
-        max-width: 700px;
-        height: 350px;
-        margin: 2rem auto;
-    }
-
-    .reason h2,
-    .reason h3,
-    .reason p {
-        text-align: center;
+        height: 340px;
     }
 
     .reason-icons {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
     }
 
 
     /* ===========================
-       SOLUTIONS
+       RENEWABLE ENERGY SOLUTIONS
+       #solutionsContainer (solutions.html)
+       Same layout as base (stacked img on top,
+       text below), just 2-column grid + bigger images
     =========================== */
 
-    #showHere {
+    #solutionsContainer {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        align-items: stretch;
-    }
-
-    .solution-card {
-        height: 100%;
+        gap: 1.5rem;
     }
 
     .solution-card img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
+        height: 260px;
     }
 
     .solution-card h3,
     .solution-card h4 {
-        font-size: 1.2rem;
         text-align: center;
     }
 
     .solution-card p {
         text-align: center;
-        padding: 0 1rem;
+    }
+
+    .solution-card ul {
+        text-align: left;
+        max-width: 350px;
+        margin: 0 auto;
     }
 
 
     /* ===========================
-       SMART ENERGY
+       FEATURED SOLUTIONS / SMART CARDS
     =========================== */
 
+    #showHere,
     #smartContainer {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .smart-card {
-        height: 100%;
-    }
-
-    .smart-card img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
+        gap: 1.5rem;
     }
 
 
     /* ===========================
-       SMART BENEFITS
+       HOW OUR SOLUTIONS WORK
+       #processContainer (solutions.html)
     =========================== */
 
+    #processContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    #processContainer img {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    /* ===========================
+       START YOUR RENEWABLE ENERGY JOURNEY
+    =========================== */
+
+    .solution-contact h2,
+    .solution-contact p {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ===========================
+       BENEFITS OF RENEWABLE ENERGY
+    =========================== */
+
+    #benefit,
     #benefitsContainer {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .benefit-card {
-        min-height: 220px;
-    }
-
-    .benefit-card img,
-    #benefitsContainer img {
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-    }
-
-
-    /* ===========================
-       BENEFITS
-    =========================== */
-
-    #benefit {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    #benefit article {
-        min-height: 220px;
+        gap: 1.5rem;
     }
 
 
@@ -168,32 +239,29 @@
 
     #work {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    #work article {
-        min-height: 220px;
+        gap: 1.5rem;
     }
 
 
     /* ===========================
-       CONTACT
+       CONTACT FORM
     =========================== */
 
     .contact {
-        max-width: 750px;
-        margin: auto;
+        max-width: 600px;
     }
 
-
-    /* ===========================
-       THANK YOU
-    =========================== */
-
-    .thankyou {
-        max-width: 750px;
-        margin: auto;
+    form {
+        padding: 2rem;
     }
+  .contact-form button[type="submit"] {
+      background: #0d6efd;
+      padding: 1.1rem;
+  }
+
+  .contact-form button[type="submit"]:hover {
+      background: #0b5ed7;
+  }
 
 
     /* ===========================
@@ -201,7 +269,6 @@
     =========================== */
 
     footer {
-        padding: 3rem;
+        padding: 2.5rem 1.5rem;
     }
-
 }
