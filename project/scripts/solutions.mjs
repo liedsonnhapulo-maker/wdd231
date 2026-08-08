@@ -17,7 +17,7 @@ solutions.forEach(solution => {
 
     card.innerHTML = `
 
-     <img src="${solution.image}" alt="${solution.name}" width="300" height="300" loading="lazy">
+     <img src="${solution.image}" alt="${solution.name}" width="400" height="300" loading="lazy">
 
 
         <h3>${solution.name}</h3>
