@@ -126,5 +126,12 @@ work.forEach(x => {
 `;
 
     workHere.appendChild(card);
+    async function loadData() {
+        try {
+            // operação assíncrona
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
 });
