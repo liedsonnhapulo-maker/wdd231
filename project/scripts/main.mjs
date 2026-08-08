@@ -95,7 +95,7 @@ benefits.forEach(x => {
 
     card.innerHTML = `
 
-<img src="${x.image}" alt="${x.title}">
+<img src="${x.image}" alt="${x.title}" width="400" height="300" loading="lazy">
 
 <h4>${x.title}</h4>
 

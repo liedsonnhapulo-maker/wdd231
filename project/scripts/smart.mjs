@@ -18,10 +18,7 @@ smartTechnologies.forEach(technology => {
     card.innerHTML = `
 
         <img 
-            src="${technology.image}" 
-            alt="${technology.name}" 
-            loading="lazy"
-        >
+            src="${technology.image}"   alt="${technology.name}" width="400" height="300" loading="lazy">
 
 
         <h3>

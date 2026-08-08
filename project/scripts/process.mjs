@@ -16,10 +16,7 @@ processes.forEach(process => {
     card.innerHTML = `
 
         <img 
-            src="${process.image}" 
-            alt="${process.title}"
-            loading="lazy"
-        >
+            src="${process.image}" alt="${process.title}" width="400" height="300" loading="lazy">
 
 
         <h3>
